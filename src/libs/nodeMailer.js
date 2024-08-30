@@ -7,13 +7,14 @@ const transporter = nodemailer.createTransport({
     //Usar .env para los datos sensibles
     host: 'smtp.gmail.com',
     port: 465,
-    secure: process.env.NODE_ENV === 'production',
+    secure: true,
     auth: {
         user: email,
         pass: pass
     },
     tls: {
-        rejectUnauthorized: false
+        rejectUnauthorized: true,
+        minVersion: "TLSv1.2"
     }
 });
 
