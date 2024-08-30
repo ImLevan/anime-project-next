@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 
 const email = process.env.EMAIL_USER;
-const pass = process.env.EMAIL_PASS;
+const pass = process.env.NEXT_PUBLIC_EMAIL_PASS;
 
 const transporter = nodemailer.createTransport({
     //Usar .env para los datos sensibles
@@ -13,8 +13,7 @@ const transporter = nodemailer.createTransport({
         pass: pass
     },
     tls: {
-        rejectUnauthorized: true,
-        minVersion: "TLSv1.2"
+        rejectUnauthorized: false,
     }
 });
 
