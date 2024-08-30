@@ -1,4 +1,4 @@
-const dominio = process.env.DOMINIO_API;
+const dominio = process.env.NEXT_PUBLIC_SITE_URL;
 
 export async function loginUser(username, password) {
     const response = await fetch(dominio + "/api/login", {
