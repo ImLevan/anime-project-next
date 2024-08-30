@@ -1,5 +1,4 @@
-
-const dominio = "http://localhost:3000";
+const dominio = process.env.DOMINIO_API;
 
 export async function loginUser(username, password) {
     const response = await fetch(dominio + "/api/login", {
