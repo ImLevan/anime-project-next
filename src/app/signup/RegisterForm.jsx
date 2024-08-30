@@ -54,7 +54,7 @@ function RegisterForm() {
             onSubmit={handleSubmit}
         >
             <h2 className="text-secondary text-3xl my-6 pt-6 font-bold">Registro</h2>
-            <div className="bg-stone-900 h-[405px] w-full mx-auto">
+            <div className="bg-stone-900 min-h-[405px] min-w-full mx-auto">
                 {inputs.map((input) => (
                     <FormInput
                         key={input.id}

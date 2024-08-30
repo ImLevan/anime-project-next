@@ -15,6 +15,7 @@ function LoginInputForm() {
 
     const [loading, setLoading] = useState(false);
     const [showSpanPasswordOrUser, setShowSpanPasswordOrUser] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const router = useRouter();
 
@@ -74,13 +75,17 @@ function LoginInputForm() {
                         <div className="text-white w-fit ml-[9%]">Contraseña</div>
                     </label>
                     <input
-                        type="password"
+                        type={showPassword ? "text" : "password"}
                         id="password"
                         name="password"
                         className="text-black w-4/5 h-6 focus:outline-none focus:border-b-secondary"
                         onChange={(e) => handleChange(e)}
                         required
                     />
+                    <div class="flex mt-4 ml-[9%]">
+                        <input type="checkbox" class="shrink-0 border-gray-200 rounded text-blue-600 focus:ring-blue-500" onClick={() => setShowPassword(!showPassword)}/>
+                        <label class="text-sm text-gray-500 ms-3 mt-0.5">Mostrar contraseña</label>
+                    </div>
                 </div>
             </div>
             {loading && <Loader />}

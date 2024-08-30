@@ -38,7 +38,7 @@ function SignupPage() {
 
     return (
         <div className="h-full w-full">
-            <div className="min-h-screen items-center justify-center my-[5em] mx-auto w-[45%] text-center">
+            <div className="min-h-screen items-center justify-center my-[5em] mx-auto text-center lg:w-1/2 md:w-2/3 sm:w-full">
                 <RegisterForm />
             </div>
         </div>
