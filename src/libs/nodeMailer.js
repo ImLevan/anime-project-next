@@ -6,7 +6,7 @@ const pass = process.env.EMAIL_PASS;
 const transporter = nodemailer.createTransport({
     //Usar .env para los datos sensibles
     host: 'smtp.gmail.com',
-    port: 587,
+    port: 465,
     secure: process.env.NODE_ENV === 'production',
     auth: {
         user: email,
