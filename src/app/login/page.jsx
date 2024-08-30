@@ -1,5 +1,24 @@
-'use client';
 import LoginInputForm from "./LoginInputForm";
+
+export const metadata = {
+  title: 'Login',
+  description: 'Login to be able to access the tracking of your animes',
+  openGraph: {
+      title: 'Login',
+      description: 'Login to be able to access the tracking of your animes',
+      url: 'https://anime-project-next-jet.vercel.app/login',
+      siteName: 'Anime Tracker',
+      images: [
+          {
+              url: 'https://anime-project-next-jet.vercel.app/og-image.png',
+              width: 800,
+              height: 450,
+          },
+      ],
+      locale: 'es-AR',
+      type: 'website',
+  }
+}
 
 function LoginPage() {
   return (

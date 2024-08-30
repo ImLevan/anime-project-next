@@ -19,6 +19,6 @@ export async function sendMail(mail, code) {
         from: email,
         to: mail,
         subject: 'Codigo de confirmacion',
-        text: `Su codigo de verificacion es: ${code}\nEste codigo expira en 1 hora.\n\nSi no fue usted, por favor ignore este correo.\n\nGracias por registrarse en AnimeManagment`,
+        text: `Su codigo de verificacion es: ${code}\nEste codigo expira en 1 hora.\n\nSi no fue usted, por favor ignore este correo.\n\nGracias por registrarse en Anime Tracker`,
     });
 }
