@@ -18,7 +18,7 @@ export async function GET(request) {
         }
 
         try {
-            const data = jwt.verify(loginToken.value, process.env.VERCEL_JWT_SECRET);
+            const data = jwt.verify(loginToken.value, process.env.JWT_SECRET);
             return NextResponse.json(
                 {
                     data: data

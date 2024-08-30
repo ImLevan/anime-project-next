@@ -139,7 +139,7 @@ export async function POST(request) {
 
         const token = jwt.sign(
             { id: id, code: code },
-            process.env.VERCEL_JWT_SECRET,
+            process.env.JWT_SECRET,
             {
                 expiresIn: '1h'
             }

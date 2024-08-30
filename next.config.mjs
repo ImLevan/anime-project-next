@@ -2,14 +2,14 @@
 const nextConfig = { 
     images: { domains: ["cdn.myanimelist.net"] },
     env: {
-        VERCEL_EMAIL_USER: process.env.VERCEL_EMAIL_USER,
-        VERCEL_EMAIL_PASS: process.env.VERCEL_EMAIL_PASS,
-        VERCEL_JWT_SECRET: process.env.VERCEL_JWT_SECRET,
-        VERCEL_DB_USER: process.env.VERCEL_DB_USER,
-        VERCEL_DB_HOST: process.env.VERCEL_DB_HOST,
-        VERCEL_DB_NAME: process.env.VERCEL_DB_NAME,
-        VERCEL_DB_PASSWORD: process.env.VERCEL_DB_PASSWORD,
-        VERCEL_DB_PORT: process.env.VERCEL_DB_PORT,
+        EMAIL_USER: process.env.EMAIL_USER,
+        EMAIL_PASS: process.env.EMAIL_PASS,
+        JWT_SECRET: process.env.JWT_SECRET,
+        DB_USER: process.env.DB_USER,
+        DB_HOST: process.env.DB_HOST,
+        DB_NAME: process.env.DB_NAME,
+        DB_PASSWORD: process.env.DB_PASSWORD,
+        DB_PORT: process.env.DB_PORT,
     }
 };
 
