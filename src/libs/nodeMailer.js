@@ -19,6 +19,16 @@ export async function sendMail(mail, code) {
         from: email,
         to: mail,
         subject: 'Codigo de confirmacion',
-        text: `Su codigo de verificacion es: ${code}\nEste codigo expira en 1 hora.\n\nSi no fue usted, por favor ignore este correo.\n\nGracias por registrarse en Anime Tracker`,
+        html: `
+      <div style="background-color: #f7f7f7; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #333; font-weight: bold; margin-bottom: 10px;">Verificación de cuenta</h2>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Su código de verificación es: <strong>${code}</strong></p>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Este código expira en 1 hora.</p>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Si no fue usted quien solicitó la verificación, por favor ignore este correo.</p>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Gracias por registrarse en Anime Tracker.</p>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Atentamente,</p>
+        <p style="color: #666; font-size: 16px;">El equipo de Anime Tracker</p>
+      </div>
+    `,
     });
 }

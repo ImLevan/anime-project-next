@@ -10,14 +10,29 @@ export const metadata = {
         siteName: 'Anime Tracker',
         images: [
             {
-                url: 'https://anime-project-next-jet.vercel.app/og-image.png',
+                url: 'https://anime-project-next-jet.vercel.app/og-image.webp',
                 width: 800,
                 height: 450,
+                alt: "Anime Tracker - A simple app to track your animes"
             },
         ],
         locale: 'es-AR',
         type: 'website',
-    }
+    },
+    twitter: {
+        title: "Sign Up",
+        description: "Register to be able to access the tracking of your animes",
+        card: "summary_large_image",
+        creator: "@valentin_chianese",
+        images: [
+            {
+                url: "https://anime-project-next-jet.vercel.app/og-image.webp",
+                width: 800,
+                height: 450,
+                alt: "Anime Tracker - A simple app to track your animes"
+            },
+        ],
+    },
 }
 function SignupPage() {
 

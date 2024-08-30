@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/app/assets/imgs/logo.png";
+import logo from "/public/images/logo.webp";
 import Navbar from "./Navbar";
 import { cookies } from "next/headers";
 import jwt from 'jsonwebtoken';
