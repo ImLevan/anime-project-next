@@ -39,7 +39,7 @@ function Home() {
 
 
     return (
-        <div className="h-screen overflow-y-auto mb-20">
+        <div className="min-h-screen overflow-y-auto mb-20">
             <HomeContent />
         </div>
     );

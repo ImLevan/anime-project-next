@@ -37,8 +37,8 @@ export const metadata = {
 function SignupPage() {
 
     return (
-        <div className="h-screen w-full">
-            <div className="block items-center justify-center my-[5em] mx-auto w-[45%] text-center">
+        <div className="h-full w-full">
+            <div className="min-h-screen items-center justify-center my-[5em] mx-auto w-[45%] text-center">
                 <RegisterForm />
             </div>
         </div>

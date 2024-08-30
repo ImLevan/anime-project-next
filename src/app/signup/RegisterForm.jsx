@@ -78,9 +78,7 @@ function RegisterForm() {
                 />
             </div>
             <Link className="block no-underline ml-2 text-secondary font-bold transition-all hover:text-white mt-6" href={`/${PublicRoutes.LOGIN}`}>
-                <div>
-                    ¿Ya tienes una cuenta?
-                </div>
+                ¿Ya tienes una cuenta?               
             </Link>
         </form>
     );
