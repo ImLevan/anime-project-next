@@ -58,7 +58,7 @@ const AnimeTable = ({ animeList }) => {
     };
 
     return (
-        <table className="w-11/12 mx-auto border-collapse">
+        <table className="table-auto w-11/12 mx-auto border-collapse overflow-scroll">
             <thead>
                 <tr className="text-center">
                     <th className="py-5 px-3 bg-tertiary">En emisión/viendo</th>
@@ -67,10 +67,10 @@ const AnimeTable = ({ animeList }) => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td className="bg-[#EADFDF]">{renderAnimeCell(animeList.filter(anime => anime.status === 'En emisión'), handleDelete, handleModalOpen, handleModalClose, open, handleClick, loading, animeState, handleChange)}</td>
-                    <td className="bg-[#D1CCCC]">{renderAnimeCell(animeList.filter(anime => anime.status === 'Esperando temporada'), handleDelete, handleModalOpen, handleModalClose, open, handleClick, loading, animeState, handleChange)}</td>
-                    <td className="bg-[#EADFDF]">{renderAnimeCell(animeList.filter(anime => anime.status === 'Pausadas por mí'), handleDelete, handleModalOpen, handleModalClose, open, handleClick, loading, animeState, handleChange)}</td>
+                <tr className="align-top">
+                    <td className="bg-[#EADFDF] w-1/3">{renderAnimeCell(animeList.filter(anime => anime.status === 'En emisión'), handleDelete, handleModalOpen, handleModalClose, open, handleClick, loading, animeState, handleChange)}</td>
+                    <td className="bg-[#D1CCCC] w-1/3">{renderAnimeCell(animeList.filter(anime => anime.status === 'Esperando temporada'), handleDelete, handleModalOpen, handleModalClose, open, handleClick, loading, animeState, handleChange)}</td>
+                    <td className="bg-[#EADFDF] w-1/3">{renderAnimeCell(animeList.filter(anime => anime.status === 'Pausadas por mí'), handleDelete, handleModalOpen, handleModalClose, open, handleClick, loading, animeState, handleChange)}</td>
                 </tr>
             </tbody>
         </table>
@@ -85,20 +85,20 @@ const renderAnimeCell = (animes, handleDelete, handleModalOpen, handleModalClose
                     <Image src={anime.image} alt={anime.title} width={50} height={70} className="mr-2" />
                     <div className="flex-1 relative">
                         <Link href={`https://www.crunchyroll.com/search?q=${encodeURIComponent(anime.title)}`} title="Buscar en Crunchyroll" target="_blank" rel="noreferrer" className="text-black hover:text-[#FF7F50]">
-                            <strong className="text-lg mb-1 pr-5">{anime.title}</strong>
+                            <strong className="text-xs md:text-lg mb-1 pr-5">{anime.title}</strong>
                         </Link>
-                        <div className="flex flex-wrap">
+                        <div className="flex flex-wrap gap-2 md:gap-0">
                             {anime.status === 'En emisión' ? (
                                 <>
-                                    <div className="bg-[#FF5C00] text-white rounded-full px-3 py-1 mr-7">
+                                    <div className="bg-[#FF5C00] text-white rounded-full px-1 md:px-3 py-0.5 md:py-1 mr-7 text-xs md:text-base">
                                         <p>{anime.emision_day}</p>
                                     </div>
-                                    <div className="bg-[#FF5C00] text-white rounded-full px-3 py-1">
+                                    <div className="bg-[#FF5C00] text-white rounded-full px-1 md:px-3 py-0.5 md:py-1 text-xs md:text-base">
                                         <p>{anime.genre}</p>
                                     </div>
                                 </>
                             ) : (
-                                <div className="bg-[#FF5C00] text-white rounded-full px-3 py-1">
+                                <div className="bg-[#FF5C00] text-white rounded-full px-1 md:px-3 py-0.5 md:py-1 text-xs md:text-base">
                                     <p>{anime.genre}</p>
                                 </div>
                             )}

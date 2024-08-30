@@ -46,7 +46,7 @@ function Home() {
     }
 
     return (
-        <div className="h-screen">
+        <div className="h-screen overflow-y-auto mb-20">
             <div className="md:flex relative justify-center w-11/12 mx-auto my-11">
                 <h1 className="text-white md:text-center">Lista de Animes</h1>
                 <button

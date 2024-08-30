@@ -1,9 +1,9 @@
-import { Nunito_Sans } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
-const nunito = Nunito_Sans({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Anime Tracker",
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={nunito.className}>
+      <body className={roboto.className}>
         <Header />
         <div className="mx-auto h-full max-w-7xl">
           {children}
