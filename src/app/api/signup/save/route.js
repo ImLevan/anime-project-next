@@ -152,7 +152,7 @@ export async function POST(request) {
             maxAge: 1000 * 60 * 60 * 24 * 30,
             path: '/'
         })
-        sendMail(email, code);
+        await sendMail(email, code);
 
         return NextResponse.json(
             {

@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-const email = process.env.EMAIL_USER;
+const email = process.env.NEXT_PUBLIC_EMAIL_USER;
 const pass = process.env.NEXT_PUBLIC_EMAIL_PASS;
 
 const transporter = nodemailer.createTransport({
@@ -10,10 +10,7 @@ const transporter = nodemailer.createTransport({
     secure: true,
     auth: {
         user: email,
-        pass: pass
-    },
-    tls: {
-        rejectUnauthorized: false,
+        pass
     }
 });
 
