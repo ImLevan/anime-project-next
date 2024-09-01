@@ -55,7 +55,7 @@ function LoginInputForm() {
             autoComplete="off"
         >
             <h2 className="text-secondary text-3xl my-6 pt-6 font-bold">Bienvenido</h2>
-            <div className="bg-stone-900 h-[235px] w-full">
+            <div className="bg-stone-900 h-[250px] w-full">
                 <div className="pt-11">
                     <label className="placeholder-text">
                         <div className="text-white w-fit ml-[9%]">Usuario</div>
@@ -82,9 +82,14 @@ function LoginInputForm() {
                         onChange={(e) => handleChange(e)}
                         required
                     />
-                    <div class="flex mt-4 ml-[9%]">
-                        <input type="checkbox" class="shrink-0 border-gray-200 rounded text-blue-600 focus:ring-blue-500" onClick={() => setShowPassword(!showPassword)}/>
-                        <label class="text-sm text-gray-500 ms-3 mt-0.5">Mostrar contraseña</label>
+                    <div className="text-start ml-[9%] my-1">
+                        <Link href={"/reset-password"} className="no-underline text-secondary font-bold transition-all hover:text-white">
+                            ¿Olvidaste tu contraseña?
+                        </Link>
+                    </div>
+                    <div className="flex ml-[9%]">
+                        <input type="checkbox" className="shrink-0 border-gray-200 rounded text-blue-600 focus:ring-blue-500" onClick={() => setShowPassword(!showPassword)}/>
+                        <label className="text-sm text-gray-500 ms-3 mt-0.5">Mostrar contraseña</label>
                     </div>
                 </div>
             </div>

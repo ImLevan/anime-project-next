@@ -31,7 +31,7 @@ export async function POST(request) {
         if (typeof username !== 'string' || typeof password !== 'string' || typeof email !== 'string') {
             return NextResponse.json(
                 {
-                    auth: false,
+                    saved: false,
                     message: 'El nombre de usuario, el email y la contraseña deben ser cadenas de texto',
                 },
                 {
@@ -43,7 +43,7 @@ export async function POST(request) {
         if (!usernamePattern.test(username)) {
             return NextResponse.json(
                 {
-                    auth: false,
+                    saved: false,
                     message: 'El nombre de usuario debe tener entre 3 y 50 caracteres y no debe contener caracteres especiales',
                 },
                 {
@@ -55,7 +55,7 @@ export async function POST(request) {
         if (!passwordPattern.test(password)) {
             return NextResponse.json(
                 {
-                    auth: false,
+                    saved: false,
                     message: 'La contraseña debe tener entre 8 y 20 caracteres, al menos una mayúscula, una minúscula, un número y un caracter especial',
                 },
                 {
@@ -67,7 +67,7 @@ export async function POST(request) {
         if (!emailPattern.test(email)) {
             return NextResponse.json(
                 {
-                    auth: false,
+                    saved: false,
                     message: 'El email debe ser una dirección de correo electrónico válida',
                 },
                 {
@@ -80,7 +80,7 @@ export async function POST(request) {
         if (password.includes(';')) {
             return NextResponse.json(
                 {
-                    auth: false,
+                    saved: false,
                     message: 'No se permiten caracteres especiales como `;` en el nombre de usuario o contraseña',
                 },
                 {

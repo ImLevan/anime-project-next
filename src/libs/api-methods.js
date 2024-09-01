@@ -103,3 +103,33 @@ export async function saveShow(showData) {
     const data = await response.json();
     return data
 }
+
+export async function resetPassword(email) {
+    const response = await fetch(dominio + "/api/user/recovery-password", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+    });
+    const data = await response.json();
+    return data
+}
+
+export async function modifyUserPassword(password, username) {
+    const response = await fetch(dominio + "/api/user/modify-user", {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ password, username }),
+    });
+    const data = await response.json();
+    return data
+}
+
+export async function getUser(userId) {
+    const response = await fetch(dominio + "/api/user/" + userId);
+    const data = await response.json();
+    return data
+}

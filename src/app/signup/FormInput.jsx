@@ -27,9 +27,9 @@ function FormInput(props) {
                             type={showPassword ? "text" : "password"}
                             onChange={handleInputChange}
                         />
-                        <div class="flex mt-4 ml-[9%]">
-                            <input type="checkbox" class="shrink-0 border-gray-200 rounded text-blue-600 focus:ring-blue-500" onClick={() => setShowPassword(!showPassword)}/>
-                            <label class="text-sm text-gray-500 ms-3 mt-0.5">Mostrar contraseña</label>
+                        <div className="flex mt-4 ml-[9%]">
+                            <input type="checkbox" className="shrink-0 border-gray-200 rounded text-blue-600 focus:ring-blue-500" onClick={() => setShowPassword(!showPassword)}/>
+                            <label className="text-sm text-gray-500 ms-3 mt-0.5">Mostrar contraseña</label>
                         </div>
                     </>
                     :

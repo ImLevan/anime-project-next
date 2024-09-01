@@ -32,3 +32,21 @@ export async function sendMail(mail, code) {
     `,
     });
 }
+
+export async function sendRecoveryMail(mail, recoveryURL) {
+    const info = await transporter.sendMail({
+        from: email,
+        to: mail,
+        subject: 'Reestablece tu contraseña',
+        html: `
+      <div style="background-color: #f7f7f7; padding: 20px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #333; font-weight: bold; margin-bottom: 10px;">Reestablece tu contraseña</h2>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Para reestablecer tu contraseña, <a href="${recoveryURL}">haga clic a continuación</a>.</p>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Si no fue usted quien solicitó la reestablecida, por favor ignore este correo.</p>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Gracias por registrarse en Anime Tracker.</p>
+        <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Atentamente,</p>
+        <p style="color: #666; font-size: 16px;">El equipo de Anime Tracker</p>
+      </div>
+    `,
+    });
+}

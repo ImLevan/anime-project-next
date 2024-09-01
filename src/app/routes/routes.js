@@ -7,5 +7,6 @@ export const PublicRoutes = {
 export const PrivateRoutes = {
     PRIVATE: 'private',
     HOME: 'home',
-    AUTH: 'auth-token'
+    AUTH: 'auth-token',
+    NEW_PASSWORD: 'new-password',
 }
