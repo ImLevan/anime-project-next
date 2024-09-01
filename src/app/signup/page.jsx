@@ -2,10 +2,10 @@ import RegisterForm from "./RegisterForm";
 
 export const metadata = {
     title: 'Sign Up',
-    description: 'Register to be able to access the tracking of your animes',
+    description: 'Registrate para tener acceso a tu agenda de animes',
     openGraph: {
         title: 'Sign Up',
-        description: 'Register to be able to access the tracking of your animes',
+        description: 'Registrate para tener acceso a tu agenda de animes',
         url: 'https://anime-project-next-jet.vercel.app/signup',
         siteName: 'Anime Tracker',
         images: [
@@ -13,7 +13,7 @@ export const metadata = {
                 url: 'https://anime-project-next-jet.vercel.app/og-image.webp',
                 width: 800,
                 height: 450,
-                alt: "Anime Tracker - A simple app to track your animes"
+                alt: "Anime Tracker - Una aplicación para gestionar tus animes"
             },
         ],
         locale: 'es-AR',
@@ -21,7 +21,7 @@ export const metadata = {
     },
     twitter: {
         title: "Sign Up",
-        description: "Register to be able to access the tracking of your animes",
+        description: "Registrate para tener acceso a tu agenda de animes",
         card: "summary_large_image",
         creator: "@valentin_chianese",
         images: [
@@ -29,7 +29,7 @@ export const metadata = {
                 url: "https://anime-project-next-jet.vercel.app/og-image.webp",
                 width: 800,
                 height: 450,
-                alt: "Anime Tracker - A simple app to track your animes"
+                alt: "Anime Tracker - Una aplicación para gestionar tus animes"
             },
         ],
     },

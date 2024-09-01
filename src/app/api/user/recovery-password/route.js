@@ -77,7 +77,7 @@ export async function POST(request) {
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'none',
             domain: process.env.NEXT_PUBLIC_SITE_URL === 'http://localhost:3000' ? '' : process.env.NEXT_PUBLIC_SITE_URL,
-            maxAge: 1000 * 60 * 60 * 24 * 30,
+            maxAge: 3600000,
             path: '/'
         })
 

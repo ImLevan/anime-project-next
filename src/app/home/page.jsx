@@ -2,10 +2,10 @@ import HomeContent from "./HomeContent";
 
 export const metadata = {
     title: 'Anime Table',
-    description: 'List of your animes, edit or delete them and track them',
+    description: 'Tu lista de animes, edita o elimina tus animes y lleva un control de cada uno de ellos.',
     openGraph: {
         title: 'Anime Table',
-        description: 'List of your animes, edit or delete them and track them',
+        description: 'Tu lista de animes, edita o elimina tus animes y lleva un control de cada uno de ellos.',
         url: 'https://anime-project-next-jet.vercel.app/home',
         siteName: 'Anime Tracker',
         images: [
@@ -13,7 +13,7 @@ export const metadata = {
                 url: 'https://anime-project-next-jet.vercel.app/og-image.webp',
                 width: 800,
                 height: 450,
-                alt: "Anime Tracker - A simple app to track your animes"
+                alt: "Anime Tracker - Una aplicación para gestionar tus animes"
             },
         ],
         locale: 'es-AR',
@@ -21,7 +21,7 @@ export const metadata = {
     },
     twitter: {
         title: "Anime Table",
-        description: "List of your animes, edit or delete them and track them",
+        description: "Tu lista de animes, edita o elimina tus animes y lleva un control de cada uno de ellos.",
         card: "summary_large_image",
         creator: "@valentin_chianese",
         images: [
@@ -29,7 +29,7 @@ export const metadata = {
                 url: "https://anime-project-next-jet.vercel.app/og-image.webp",
                 width: 800,
                 height: 450,
-                alt: "Anime Tracker - A simple app to track your animes"
+                alt: "Anime Tracker - Una aplicación para gestionar tus animes"
             },
         ],
     },

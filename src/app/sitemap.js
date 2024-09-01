@@ -15,7 +15,10 @@ export default function sitemap() {
         {
             url: `${process.env.NEXT_PUBLIC_SITE_URL}/home`,
             lastModified: new Date(),
+        },
+        {
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/reset-password`,
+            lastModified: new Date(),
         }
-
     ]
 }

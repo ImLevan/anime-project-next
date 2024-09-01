@@ -7,15 +7,15 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: {
-    default: "Anime Tracker - A simple app to track your animes",
-    template: "%s | Anime Tracker - A simple app to track your animes",
+    default: "Anime Tracker - Una aplicación para gestionar tus animes",
+    template: "%s | Anime Tracker - Una aplicación para gestionar tus animes",
   },
-  description: "A simple app to track your animes",
+  description: "Una aplicación para gestionar tus animes",
   keywords: ["Anime", "Tracker", "Animes", "Tracker", "App", "AnimeManagment", "AnimeList", "AnimeTracker"],
   author: "Valentin Chianese",
   openGraph: {
-    title: "Anime Tracker - A simple app to track your animes",
-    description: "A simple app to track your animes",
+    title: "Anime Tracker - Una aplicación para gestionar tus animes",
+    description: "Anime Tracker - la aplicación que te ayuda a llevar el hilo de tus animes favoritos. Crea tu propia agenda de anime para que lleves tu cuenta!.",
     url: "https://anime-project-next-jet.vercel.app/",
     siteName: "Anime Tracker",
     images: [
@@ -23,15 +23,15 @@ export const metadata = {
         url: "https://anime-project-next-jet.vercel.app/og-image.webp",
         width: 800,
         height: 450,
-        alt: "Anime Tracker - A simple app to track your animes"
+        alt: "Anime Tracker - la aplicación que te ayuda a llevar el hilo de tus animes favoritos. Crea tu propia agenda de anime para que lleves tu cuenta!."
       },
     ],
     locale: "es-AR",
     type: "website",
   },
   twitter: {
-    title: "Anime Tracker - A simple app to track your animes",
-    description: "A simple app to track your animes",
+    title: "Anime Tracker - Una aplicación para gestionar tus animes",
+    description: "Anime Tracker - la aplicación que te ayuda a llevar el hilo de tus animes favoritos. Crea tu propia agenda de anime para que lleves tu cuenta!.",
     card: "summary_large_image",
     creator: "@valentin_chianese",
     images: [
@@ -39,7 +39,7 @@ export const metadata = {
         url: "https://anime-project-next-jet.vercel.app/og-image.webp",
         width: 800,
         height: 450,
-        alt: "Anime Tracker - A simple app to track your animes"
+        alt: "Anime Tracker - Una aplicación para gestionar tus animes"
       },
     ],
   },

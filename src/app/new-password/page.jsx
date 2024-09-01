@@ -2,6 +2,10 @@ import NewPasswordForm from "./NewPasswordForm";
 
 export const metadata = {
   title: 'Cambiar contraseña',
+  robots: {
+    index: false,
+    follow: false
+  }
 }
 
 function NewPasswordPage() {

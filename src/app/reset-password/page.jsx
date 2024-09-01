@@ -2,6 +2,7 @@ import ResetPasswordForm from "./ResetPasswordForm";
 
 export const metadata = {
   title: 'Restablecer contraseña',
+  description: 'Recupera tu contraseña en el caso de que la hayas olvidado'
 }
 
 function ResetPasswordPage() {

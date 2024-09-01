@@ -2,10 +2,10 @@ import LoginInputForm from "./LoginInputForm";
 
 export const metadata = {
   title: 'Login',
-  description: 'Login to be able to access the tracking of your animes',
+  description: 'Inicia sesion para tener acceso a tu agenda de animes',
   openGraph: {
     title: 'Login',
-    description: 'Login to be able to access the tracking of your animes',
+    description: 'Inicia sesion para tener acceso a tu agenda de animes',
     url: 'https://anime-project-next-jet.vercel.app/login',
     siteName: 'Anime Tracker',
     images: [
@@ -13,7 +13,7 @@ export const metadata = {
         url: 'https://anime-project-next-jet.vercel.app/og-image.webp',
         width: 800,
         height: 450,
-        alt: "Anime Tracker - A simple app to track your animes"
+        alt: "Anime Tracker - Una aplicación para gestionar tus animes"
       },
     ],
     locale: 'es-AR',
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     title: "Login",
-    description: "Login to be able to access the tracking of your animes",
+    description: "Inicia sesion para tener acceso a tu agenda de animes",
     card: "summary_large_image",
     creator: "@valentin_chianese",
     images: [
@@ -29,7 +29,7 @@ export const metadata = {
         url: "https://anime-project-next-jet.vercel.app/og-image.webp",
         width: 800,
         height: 450,
-        alt: "Anime Tracker - A simple app to track your animes"
+        alt: "Anime Tracker - Una aplicación para gestionar tus animes"
       },
     ],
   },
