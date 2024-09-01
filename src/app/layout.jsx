@@ -10,7 +10,7 @@ export const metadata = {
     default: "Anime Tracker - Una aplicación para gestionar tus animes",
     template: "%s | Anime Tracker - Una aplicación para gestionar tus animes",
   },
-  description: "Una aplicación para gestionar tus animes",
+  description: "Anime Tracker - la aplicación que te ayuda a llevar el hilo de tus animes favoritos. Crea tu propia agenda de anime para que lleves tu cuenta!.",
   keywords: ["Anime", "Tracker", "Animes", "Tracker", "App", "AnimeManagment", "AnimeList", "AnimeTracker"],
   author: "Valentin Chianese",
   openGraph: {
