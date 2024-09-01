@@ -1,27 +1,51 @@
 {
-    "rewrites": [
-        {
-            "source": "/api/:path*",
-            "destination": "/api/:path*"
-        },
-        {
-            "source": "/:path*",
-            "destination": "/index.html"
-        }
+    "version": 2,
+    "routes": [
+      {
+        "src": "/home",
+        "dest": "/home",
+        "check": true
+      },
+      {
+        "src": "/auth-token/:path*",
+        "dest": "/auth-token/:path*",
+        "check": true
+      },
+      {
+        "src": "/new-password/:token*",
+        "dest": "/new-password/:token*",
+        "check": true
+      },
+      {
+        "src": "/login",
+        "dest": "/login",
+        "check": true
+      },
+      {
+        "src": "/signup",
+        "dest": "/signup",
+        "check": true
+      },
+      {
+        "src": "/reset-password",
+        "dest": "/reset-password",
+        "check": true
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html",
+        "check": false
+      }
     ],
     "headers": [
-        {
-            "source": "/api/:path*",
-            "headers": [
-                {
-                    "key": "Access-Control-Allow-Origin",
-                    "value": "*"
-                },
-                {
-                    "key": "Set-Cookie",
-                    "value": "SameSite=None; Secure"
-                }
-            ]
-        }
+      {
+        "source": "/(.*)",
+        "headers": [
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          }
+        ]
+      }
     ]
 }
