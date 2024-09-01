@@ -129,7 +129,8 @@ export async function POST(request) {
         const serialized = serialize('loginToken', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
+            sameSite: 'none',
+            domain: process.env.NEXT_PUBLIC_SITE_URL === 'http://localhost:3000' ? '' : process.env.NEXT_PUBLIC_SITE_URL,
             maxAge: 1000 * 60 * 60 * 24 * 30,
             path: '/'
         })
