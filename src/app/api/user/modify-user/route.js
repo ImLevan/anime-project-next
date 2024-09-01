@@ -101,8 +101,6 @@ export async function PATCH(request) {
             [hashedPassword, username]
         );
 
-        console.log(result2);
-
         if (result2.rowCount < 1) {
             return NextResponse.json(
                 {
