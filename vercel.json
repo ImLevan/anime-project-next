@@ -19,7 +19,7 @@
                 },
                 {
                     "key": "Set-Cookie",
-                    "value": "auth-token=1234567890; Max-Age=3600; Secure; HttpOnly"
+                    "value": "SameSite=None; Secure"
                 }
             ]
         }
