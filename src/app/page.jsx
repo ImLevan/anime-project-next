@@ -6,8 +6,8 @@ import Image from "next/image";
 
 function HomePage() {
  return (
-    <div className="mx-auto mb-24">
-      <div className="landing-content">
+    <div className="mx-auto mb-24 h-full w-full">
+      <div className="min-h-screen">
         <section id="hero" className="w-full lg:w-[1312px] bg-cover flex flex-col justify-center relative mx-auto">
           <div className='w-full h-[600px] flex items-center overflow-hidden m-0'>
             <Image src={hero1} alt="Oferta 1" width={1920} height={900} className="max-h-[1312px] w-full h-auto object-cover"/>
