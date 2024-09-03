@@ -78,7 +78,8 @@ export async function POST(request) {
             sameSite: 'none',
             domain: process.env.NEXT_PUBLIC_SITE_URL === 'http://localhost:3000' ? '' : process.env.NEXT_PUBLIC_SITE_URL,
             maxAge: 3600000,
-            path: '/'
+            path: '/',
+            credentials: true
         })
 
         const recoveryURL = process.env.NEXT_PUBLIC_SITE_URL + '/new-password?token=' + result.rows[0].id;
@@ -95,7 +96,9 @@ export async function POST(request) {
             {
                 status: 200,
                 headers: {
-                    'Set-Cookie': serialized
+                    'Set-Cookie': serialized,
+                    'Access-Control-Allow-Credentials': true,
+                    'Access-Control-Allow-Origin': process.env.NEXT_PUBLIC_SITE_URL
                 }
             }
         );
