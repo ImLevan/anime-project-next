@@ -76,7 +76,7 @@ export async function POST(request) {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'none',
-            domain: process.env.NEXT_PUBLIC_SITE_URL === 'http://localhost:3000' ? '' : process.env.NEXT_PUBLIC_SITE_URL,
+            domain: process.env.NEXT_PUBLIC_SITE_URL_WH === 'http://localhost:3000' ? '' : process.env.NEXT_PUBLIC_SITE_URL_WH,
             maxAge: 3600000,
             path: '/',
             credentials: true
@@ -98,7 +98,7 @@ export async function POST(request) {
                 headers: {
                     'Set-Cookie': serialized,
                     'Access-Control-Allow-Credentials': true,
-                    'Access-Control-Allow-Origin': process.env.NEXT_PUBLIC_SITE_URL
+                    'Access-Control-Allow-Origin': process.env.NEXT_PUBLIC_SITE_URL_WH
                 }
             }
         );
