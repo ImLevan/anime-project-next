@@ -30,6 +30,7 @@ export async function POST(request) {
             return NextResponse.json(
                 {
                     message: 'Todos los campos son obligatorios',
+                    status: 400
                 },
                 {
                     status: 400,

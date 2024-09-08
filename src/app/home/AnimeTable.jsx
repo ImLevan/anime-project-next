@@ -6,6 +6,7 @@ import ModalComponent from "./ModalComponent";
 import Image from "next/image";
 import { deleteShow, updateShow } from "@/libs/api-methods";
 import Link from "next/link";
+import { toast } from "sonner";
 
 const AnimeTable = ({ animeList }) => {
     const [open, setOpen] = useState(false);
@@ -33,8 +34,10 @@ const AnimeTable = ({ animeList }) => {
             if (status !== 200) {
                 alert(message);
             } else {
-                alert("Anime actualizado con exito");
-                window.location.reload();
+                toast.success(message);
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1000);
             }
         } catch (error) {
             console.error('Error al actualizar anime:', error);
@@ -42,19 +45,23 @@ const AnimeTable = ({ animeList }) => {
     }
 
     const handleDelete = async (id) => {
-        let response;
-        const confirmed = window.confirm("¿Seguro que quieres borrar este anime?");
-        if (confirmed) {
-            response = await deleteShow(id);
-
-            if(response){
-                alert("Anime borrado con exito");
+        toast('¿Seguro que quieres borrar este show?', {
+            action:{
+              label: 'Borrar',
+              onClick: () => {
+                toast.promise(deleteShow(id), {
+                  loading: 'Borrando...',
+                  success: () => {
+                    setTimeout(() => {
+                      window.location.reload();
+                    }, 2000);
+                    return 'Show borrado correctamente';
+                  },
+                  error: 'Ocurrio un error inesperado al borrar el show',
+                })      
+              }
             }
-            else{
-                alert("Anime no borrado");
-            }
-            window.location.reload();
-        }
+          })
     };
 
     return (

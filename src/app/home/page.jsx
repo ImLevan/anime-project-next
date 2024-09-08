@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import HomeContent from "./HomeContent";
 
 export const metadata = {
@@ -40,6 +41,7 @@ function Home() {
 
     return (
         <div className="min-h-screen overflow-y-auto mb-20">
+            <Toaster richColors position='top-center' closeButton />
             <HomeContent />
         </div>
     );

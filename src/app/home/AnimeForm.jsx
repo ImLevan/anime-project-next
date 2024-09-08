@@ -9,6 +9,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import CancelIcon from '@mui/icons-material/Cancel';
 import Image from "next/image";
 import { saveShow } from "@/libs/api-methods";
+import { toast } from "sonner";
 
 // eslint-disable-next-line react/prop-types
 const AnimeForm = ({ setAnimeForm, userId }) => {
@@ -47,16 +48,23 @@ const AnimeForm = ({ setAnimeForm, userId }) => {
                 data = data.data[0]
                 // Actualizar el estado con los resultados.
                 const anime = { title: data.title, genre: data.genres[0].name, image: data.images.webp.image_url, emision_day: data.broadcast.day, status: animeState, user_id: userId };
-                console.log(anime)
                 setLoading(true);
                 //Enviar "anime" a una funcion del UserContext para almecenarlo en la base de datos
                 const { status, message } = await saveShow(anime);
-                alert(message);
-                setLoading(false);
-                window.location.reload();
+                if (status !== 201) {
+                    toast.error(message);              
+                }else{
+                    toast.success(message);
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1000);
+                }
             } catch (error) {
                 console.error('Error al buscar anime:', error);
+                toast.error("Intente nuevamente o pruebe con otro anime");
                 // Manejar el error según sea necesario.
+            }finally{
+                setLoading(false);
             }
 
         }else{

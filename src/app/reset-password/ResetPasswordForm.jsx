@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Loader from "../components/Loader";
 import { resetPassword } from "@/libs/api-methods";
+import { toast } from "sonner";
 
 function ResetPasswordForm() {
     const [loading, setLoading] = useState(false);
@@ -21,13 +22,13 @@ function ResetPasswordForm() {
 
         try {
             const data = await resetPassword(email);
-            setShowSpanEmail(true);
-            setResponseMessage(data.message);
-
-            if (data.saved) {
+            if(data.saved) {
+                toast.success(data.message);
                 setShowInput(false);
+            }else{
+                setShowSpanEmail(true);
+                setResponseMessage(data.message);
             }
-
         } catch (error) {
             console.log(error);
         } finally {

@@ -4,6 +4,7 @@ import Loader from "../components/Loader";
 import { useSearchParams } from 'next/navigation'
 import jwt from 'jsonwebtoken'
 import { getUser, modifyUserPassword } from "@/libs/api-methods";
+import { toast } from "sonner";
 
 function NewPasswordForm() {
     const [showInput, setShowInput] = useState(true);
@@ -42,11 +43,12 @@ function NewPasswordForm() {
 
         try {
             const data = await modifyUserPassword(password, username);
-            setShowSpanPassword(true);
-            setResponseMessage(data.message);
-
-            if (data.saved) {
+            if(data.saved) {
+                toast.success(data.message);
                 setShowInput(false);
+            }else{
+                setShowSpanPassword(true);
+                setResponseMessage(data.message);
             }
 
         } catch (error) {
